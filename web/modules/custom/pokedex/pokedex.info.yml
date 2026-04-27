@@ -1,0 +1,6 @@
+# Datos principales del modulo personalzado
+name: Pokedex
+type: module
+description: Módulo personalizado de Pokédez con PokéAPI
+core_version_requirement: ^10 || ^11
+package: Custom

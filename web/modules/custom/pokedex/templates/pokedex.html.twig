@@ -1,0 +1,29 @@
+<div class="pokedex">
+    <div  id="pokeball" class="loader"></div>
+    <div class="pokedex-nav">
+
+        {% if page > 0 %}
+            <a href="?page={{ page - 1 }}" class="button-nav">Anterior</a>
+        {% else %}
+            <a href="" class="button-disabled" aria-disabled="true">Anterior</a>
+        {% endif %}
+
+        <span class="num-page"> Pagina {{ page + 1 }}</span>
+
+        {% if next_page %}
+            <a href="?page={{ page + 1 }}" class="button-nav"> Siguiente</a>
+        {% endif %}
+
+    </div>
+    <div class="pokemonList">
+        {% for pokemon in pokemons %}
+            <div class="pokemonCard shadow">
+                <p id="idpokemon"> ID {{ pokemon.id }}</p>
+                <p id="namepokemon">{{ pokemon.name }}</p>
+                <img src="{{ pokemon.image }}"></img>
+                <a href="/pokedex/pokemon/{{pokemon.name}}"><button>Más detalles</button></a>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>

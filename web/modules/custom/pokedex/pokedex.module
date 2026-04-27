@@ -1,0 +1,23 @@
+<?php
+
+function pokedex_theme() {
+
+    return [
+
+        'pokedex' => [
+            'variables' => [
+                'pokemons' => NULL,
+                'page' => NULL,
+                'next_page' => NULL,
+            ],
+            'template' => 'pokedex',
+        ],
+        'pokemon' => [
+            'variables' => [
+                'pokemon' => NULL,
+            ],
+            'template' => 'pokemon'
+        ],
+
+    ];
+}

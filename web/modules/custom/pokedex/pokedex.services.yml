@@ -1,0 +1,6 @@
+# Indicamos la ruta de nuestro servicio y
+# el cliente que hará las consultas a la pokeAPI
+services:
+  pokedex.service:
+    class: Drupal\pokedex\Service\PokedexService
+    arguments: ['@http_client']

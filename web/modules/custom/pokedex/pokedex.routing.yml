@@ -1,0 +1,18 @@
+# Listado general de pokemons
+pokedex.index:
+  path: '/pokedex'
+  defaults:
+    _title: 'Listado de la pokedex'
+    _controller: '\Drupal\pokedex\Controller\PokedexController::index'
+  requirements:
+    _permission: 'access content'
+
+# Detalle de cada pokemon seleccionado
+pokedex.details:
+  path: 'pokedex/pokemon/{name}'
+  defaults:
+    _title: "Detalles del pokemon"
+    _controller: '\Drupal\pokedex\Controller\PokedexController::details'
+  requirements:
+    _permission: 'access content'
+    

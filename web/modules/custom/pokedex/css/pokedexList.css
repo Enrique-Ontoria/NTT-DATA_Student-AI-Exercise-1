@@ -1,0 +1,167 @@
+.pokedex-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokedex-nav a {
+    margin: 0;
+    padding: 20px;
+}
+
+.pokedex span {
+    padding: 15px;
+}
+
+.pokemonList {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pokemonCard {
+    box-sizing: border-box;
+    width: 190px;
+    padding-bottom: 15px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonCard:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.pokemonCard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+#idpokemon {
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    border-radius: 8px;
+    width: max-content;
+    padding: 2px 5px;
+}
+
+#namepokemon {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+button, .button-nav {
+  position: relative;
+  display: inline-block;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+.button-disabled {
+    position: relative;
+    display: inline-block;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 2px solid #666;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #666;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+button:hover, .button-nav:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+button:active, .button-nav:active {
+  transform: scale(0.9);
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  margin: 0 auto;
+  height: 60px;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  transform-origin: bottom;
+}
+
+.loader::after {
+  background: radial-gradient(at 75% 15%,#fffb,#0000 35%),
+    radial-gradient(at 80% 40%,#0000,#0008),
+    radial-gradient(circle  5px,#fff 94%,#0000),
+    radial-gradient(circle 10px,#000 94%,#0000),
+    linear-gradient(#F93318 0 0) top   /100% calc(50% - 5px),
+    linear-gradient(#fff    0 0) bottom/100% calc(50% - 5px)
+    #000;
+  background-repeat: no-repeat;
+  animation: l20 1s infinite cubic-bezier(0.5,120,0.5,-120);
+}
+
+.loader::before {
+  background: #ddd;
+  filter: blur(8px);
+  transform: scaleY(0.4) translate(-13px, 0px);
+}
+
+@keyframes l20 {
+ 
+  30%,70% {
+    transform: rotate(0deg)
+  }
+
+  49.99% {
+    transform: rotate(0.2deg)
+  }
+
+  50% {
+    transform: rotate(-0.2deg)
+  }
+}
+
+

@@ -1,0 +1,25 @@
+# Biblioteca para el listado de pokemons
+pokedex-list:
+  version: 1.x
+  css:
+    theme:
+      css/pokedexList.css: {}
+
+# Biblioteca para los detalles de cada pokemon
+pokedex-details:
+  version: 1.x
+  css:
+    theme:
+      css/pokemonDetails.css: {}
+
+# Biblioteca para mostrar evoluciones de cada pokemon
+pokedex-evo:
+  version: 1.x
+  js:
+    js/detailsEvo.js: {}
+  
+# Bilbioteca para mostrar estado loading
+pokedex-list-script:
+  version: 1.x
+  js:
+    js/pokedexList.js: {}

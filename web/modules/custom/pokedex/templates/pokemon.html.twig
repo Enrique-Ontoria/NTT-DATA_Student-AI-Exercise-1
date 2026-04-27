@@ -1,0 +1,25 @@
+<div class="details">
+    <div class="pokemon-details shadow">
+        <img class="data-img" src="{{ pokemon.image}}" alt="{{pokemon.name}}">
+        <div class="data">
+            <p><b>ID:</b> {{pokemon.id}}</p>
+            <p><b>{{pokemon.name | capitalize}}</b></p>
+            {% for type in pokemon.types %}
+                <p><b>Tipo:</b> {{type}}</p>
+            {% endfor %}
+            <p><b>Altura:</b> 0.{{pokemon.height}} m</p>
+            <p><b>Peso:</b> {{pokemon.weight}} kg</p>
+        </div>
+
+    </div>
+    <button class="btn-evo">Evoluciones</button>
+    <a href="/pokedex"><button class="btn-back"> Volver </button></a>
+    <div class="evolutions">
+        {% for evo in pokemon.evo %}
+            <div class="evo-card">
+                <img src="{{evo.image}}" alt="{{evo.name}}">
+                <h2>{{evo.name}}</h2>
+            </div>
+        {% endfor %}
+    </div>
+</div>
